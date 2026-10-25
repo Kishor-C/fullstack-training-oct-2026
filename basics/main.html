@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="mainHeading">Javascript Examples</h1>
+    <div>
+      <img
+        id="mainImage"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG7FNl3f0V_x6O7lYiNYCshYLFStnlEPiNmkwcoV_y6g&s=10"
+        width="500"
+        height="500"
+      />
+    </div>
+    <div onclick="rolling(event)">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG7FNl3f0V_x6O7lYiNYCshYLFStnlEPiNmkwcoV_y6g&s=10"
+        width="100"
+        height="100"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBBQ9-aBTfm3ii3xArovYi4zDgPZ4ZPtDdw9LFcCBxwQ&s=10"
+        width="100"
+        height="100"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjOdYACafu9Syq4eAMrRdeYtzrzojHLcsfzGaVioAx1Q&s=10"
+        width="100"
+        height="100"
+      />
+    </div>
+    <button onclick="greet()">Button</button>
+    <div id="main"></div>
+    <div>
+      <button onclick="modify()">Modify</button>
+    </div>
+
+    <script>
+      function rolling(eve) {
+        var image = eve.target; // returns the element that generated the event
+        var mainImage = document.getElementById("mainImage");
+        console.log(image);
+        // access only img and skips other target
+        if (image.tagName == "IMG") {
+          mainImage.src = image.src;
+        }
+      }
+      function modify() {
+        var element = document.getElementById("main");
+        var headingElement = document.getElementById("mainHeading");
+        headingElement.style.color = "red"; // <h1 style="color:red">
+        element.innerHTML = "<h1>Welcome to Javascript</h1>";
+      }
+      function greet() {
+        alert("Welcome to Javascript");
+      }
+      //greet();
+    </script>
+  </body>
+</html>

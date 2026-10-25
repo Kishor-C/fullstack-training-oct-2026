@@ -4,22 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="main.css" type="text/css" rel="stylesheet" />
-    <style>
-      h1 {
-        color: red;
-        background-color: beige;
-      }
-      h2 {
-        color: purple;
-      }
-      .danger {
-        background-color: red;
-        color: white;
-      }
-    </style>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe"
+      crossorigin="anonymous"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+    <h1 class="alert theme-primary">HTML Forms</h1>
+    <div class="container-fluid w-50">
+      <form>
+        <label>Enter username</label>
+        <input
+          class="form-control form-control-lg w-50"
+          type="text"
+          name="username"
+          autocomplete="off"
+          placeholder="Input username"
+        />
+        <br />
+        <label>Enter password</label>
+        <input
+          class="form-control form-control-lg w-50"
+          type="password"
+          name="password"
+          autocomplete="off"
+          placeholder="Input password"
+        />
+        <br />
+        <label>Select Gender</label>
+        <label> <input type="radio" name="gender" value="MALE" />Male </label>
+        <label>
+          <input type="radio" name="gender" value="FEMALE" />Female
+        </label>
+        <br />
+        <label>Select Dob</label>
+        <input type="date" name="dob" />
+        <br />
+        <label>Select Qualification</label>
+        <select name="qualification">
+          <optgroup label="Graduation">
+            <option value="BTECH">BTech</option>
+            <option value="BCA">BCA</option>
+            <option value="BSC">BSC</option>
+          </optgroup>
+          <optgroup label="Post Graduation">
+            <option value="MTECH">MTech</option>
+            <option value="MCA">MCA</option>
+          </optgroup>
+        </select>
+        <br />
+        <input
+          class="btn-solid btn-styled theme-primary"
+          type="submit"
+          value="Submit"
+        />
+        <input
+          class="btn-solid btn-styled theme-primary"
+          type="reset"
+          value="Reset"
+        />
+      </form>
+    </div>
     <h1 class="success">Login Success</h1>
     <h1>Login Success again</h1>
     <h2 class="warning">Only 3 wrong attempts allowed</h2>
