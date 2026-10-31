@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Modern Javascript</h1>
+    <div id = "main">Div with an id Main</div>
+    <script>
+        function printNames(a, ...b) {
+            console.log(a, b);
+        }
+        let usernames = ["Raj", "Vijay", "Amith", "Ramya"];
+        printNames(usernames[0], usernames[1], usernames[2]); // old approach
+        printNames(...usernames); // spreads value to each argument
+        // now y is like an array
+        function sum(x, ...y) {
+            let total = x
+            for(let i of y) {
+                total = total + i
+            }
+            console.log(x, y)
+            console.log("Total = "+total)
+        }
+        sum(20, 10, 30, 50, 70);        
+        sum(20, 10);       
+        sum(20);
+        let mainElement = document.querySelector("#main");
+        //it is a function that executes a script after some time is over
+        //mainElement.innerHTML = "Payment Successfull";
+        setTimeout(() => mainElement.innerHTML = 'Payment Successfull', 25000);   
+        //using arrow function in other places
+        let prices = [1000, 2000, 3000];
+        let discountedPrice = prices.map((element, index) => element * 0.85);
+        mainElement.innerHTML = `Discounted Price: ${discountedPrice}`;
+    </script>
+</body>
+</html>

@@ -6,6 +6,8 @@
     <title>Document</title>
   </head>
   <body>
+
+
     <h1 id="mainHeading">Javascript Examples</h1>
     <div>
       <img
@@ -39,6 +41,25 @@
     </div>
 
     <script>
+      const name = "Rajesh";
+      let age = 35;
+      age++;
+      //name = "Raj";
+      let URL = 'http://www.example.com/'
+      +name+"/"+age;
+      let URL2 = `http://www.example.com/${name}/${age}`
+      let content = `<div>
+        <h1>Simple Heading inside div</h1>
+        </div>`;
+      console.log(content);
+      document.getElementById("main").innerHTML = content;
+      console.log(`Name=${name}, Age=${age}`);
+      console.log(`URL = ${URL}`);
+      console.log(`URL2 = ${URL2}`);
+      if(age > 18) {
+        let isEligibleToVote = true;
+      }
+      
       function rolling(eve) {
         var image = eve.target; // returns the element that generated the event
         var mainImage = document.getElementById("mainImage");
