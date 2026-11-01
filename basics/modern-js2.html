@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Modern Javascript</h1>
+    <script>
+        let users = [
+            {id: 1, name: "Alex", address : {state: "KA", city: "BLR"}},
+            {id: 2, name: "Brad"},
+            {id: 3, name: "Charles", address : {state: "KA", city: "Mysore"}},
+        ]; 
+        // optional chain which eliminates checking undefined properties
+        for(let u of users) {
+            console.log(`Name=${u.name}, State=${u.address?.state}`);
+        }
+        // object destructuring : { }
+        let product = {name:"Laptop", price:80000, brand:"Lenovo"};
+        // to extract price you can use object destructuring syntax
+        let {name, price, brand} = product;
+        console.log(`Name = ${name}, Price = ${price}, Brand = ${brand}`);
+        // array destructuring : []
+        let items = ["Laptop", "Mobile", "TV"];
+        // to extract the element you can use array destructuring syntax - order matters
+        let [item1, item2, item3] = items;
+        console.log(`Item1 = ${item1}, Item2 = ${item2}, Item3 = ${item3}`);
+        // modern JS syntax for object creation
+        class Customer {
+            constructor(id, name, age) {
+                this.id = id;
+                this.name = name;
+                this.age = age;
+            }
+            display() {
+                console.log(`Id=${this.id}, Name=${this.name}, Age=${this.age}`);
+            }
+        }
+        let customer1 = new Customer(200, "Vijay", 25);
+        customer1.display();
+        // you must create a constructor function
+        function User(name, age) {
+            this.name = name;
+            this.age = age;
+            // creating a function for an object
+            this.display = function() {
+                // in JS you must use this keyword to access properties
+                console.log(this.name, this.age);
+            }
+        }
+        // creating an object
+        let user1 = new User("Raj", 35);
+        user1.display();
+    </script>
+</body>
+</html>
