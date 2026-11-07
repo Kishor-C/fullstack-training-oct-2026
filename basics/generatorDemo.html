@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Generator Demo</h1>
+    <script>
+        function* demo() {
+            console.log("1");
+            yield ["one", "ten"];
+            console.log("2");
+            yield ["eleven", "twenty"];
+            console.log("3");
+            yield ["twenty one", "thirty"];
+            console.log("4");
+            return "finished";
+        }
+        let generator = demo();
+        let obj = generator.next(); // return an object with value & done
+        console.log(obj);
+        obj = generator.next();
+        console.log(obj);
+        obj = generator.next();
+        console.log(obj);
+        obj = generator.next();
+        console.log(obj);
+        obj = generator.next();
+        console.log(obj);
+    </script>
+</body>
+</html>
