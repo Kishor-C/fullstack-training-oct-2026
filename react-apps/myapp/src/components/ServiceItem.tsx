@@ -1,9 +1,5 @@
-function ServiceItem() {
-    let title: string = "Web Application";
-    let category: string = "IT";
-    let price: number = 500;
-    let ratings: number = 4.8;
-    let description: string = "Build a modern web application with latest technology";
+function ServiceItem(props : any) {
+    let {title, category, price, ratings, description} = props.item;
     return (<div>
         <h3>{title}</h3>
         <p>Category: {category}</p>
