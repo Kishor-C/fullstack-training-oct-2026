@@ -1,0 +1,85 @@
+{
+  "services": [
+    {
+      "id": "1",
+      "title": "Web Development",
+      "category": "Tech",
+      "price": 500,
+      "rating": 4.9,
+      "description": "Customized components built with modern UI Tech."
+    },
+    {
+      "id": "2",
+      "title": "Logo Design",
+      "category": "Design",
+      "price": 150,
+      "rating": 4.8,
+      "description": "Stylist logo that define your business branding and identity."
+    },
+    {
+      "id": "3",
+      "title": "Content Writing",
+      "category": "Writing",
+      "price": 80,
+      "rating": 4.7,
+      "description": "SEO optimized articles for your software products."
+    },
+    {
+      "id": "4",
+      "title": "Media Marketing",
+      "category": "Marketing",
+      "price": 300,
+      "rating": 4.6,
+      "description": "Campaigns to boost your brand presence on social media."
+    },
+    {
+      "id": "5",
+      "title": "Mobile UI/UX",
+      "category": "Design",
+      "price": 400,
+      "rating": 4.9,
+      "description": "User centric mobile UIs for high conversion and retention."
+    },
+    {
+      "id": "6",
+      "title": "Tech Automation",
+      "category": "Tech",
+      "price": 250,
+      "rating": 4.5,
+      "description": "Custom scripts to automate your tasks."
+    },
+    {
+      "id": "7",
+      "title": "Video Editing Pro",
+      "category": "Design",
+      "price": 350,
+      "rating": 4.8,
+      "description": "Quality cuts, transitions, and color grading for your videos."
+    },
+    {
+      "id": "8",
+      "title": "Ads Management",
+      "category": "Marketing",
+      "price": 200,
+      "rating": 4.4,
+      "description": "Maximize your sales with campaigns."
+    },
+    {
+      "id": "9",
+      "title": "API Integration",
+      "category": "Tech",
+      "price": 600,
+      "rating": 5,
+      "description": "Integrate your front end with APIs."
+    },
+    {
+      "id": "10",
+      "title": "Email Copywriting",
+      "category": "Writing",
+      "price": 120,
+      "rating": 4.7,
+      "description": "Emails that turn subscribers into loyal customers fast."
+    }
+  ],
+  "bookings": []
+}

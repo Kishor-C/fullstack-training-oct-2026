@@ -1,18 +1,22 @@
+import { useEffect, useState } from "react";
 import ServiceItem from "./ServiceItem";
+import axios from "axios";
 
 function ServiceItemList() {
-    let service1 : any = {title : "Video Editing", price : "600", category : "Design", ratings : "4.9",
-                description : "Editing videos with modern tools"};
-    let service2: any = {title : "Logo Design", price : "300", category : "Design", ratings:"4.5",
-                description : "Stylist logo that define your business branding and identity."};
-    let service3 : any = {title : "Content Writing", price : "400", category : "Writing", ratings : "4.7",
-                description : "SEO optimized articles for your software products."};
-
+    let [services, setServices] = useState([]); 
+    //useEffect hook: 2nd argument is a list of variables that make useEffect to execute the callback
+    // when they are changed
+    useEffect(()=>{
+        let URL = "http://localhost:3000/services";
+        axios.get(URL)
+        .then((res) => setServices(res.data))
+        .catch((err) => console.log(err));
+    },[]);
     return (
         <div>
-            <ServiceItem item =  {service1} />
-            <ServiceItem item =  {service2} />
-            <ServiceItem item =  {service3} />
+            {
+                services.map((service)=><ServiceItem key = {service.id} item = {service} />)
+            }
         </div>
     )
 }
